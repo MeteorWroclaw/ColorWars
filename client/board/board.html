@@ -1,0 +1,21 @@
+<template name="board">
+    <table class="board">
+        <tbody>
+        {{#each getBoard}}
+            <tr>
+                {{#each .}}
+                    {{> square}}
+                {{/each}}
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</template>
+
+<template name="square">
+    <td class="square" style="background-color: #{{color}};">&nbsp;</td>
+</template>
+
+<body>
+{{> board}}
+</body>

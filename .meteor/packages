@@ -7,6 +7,8 @@
 meteor-platform
 autopublish
 insecure
+underscore
+less
 iron:router
 twbs:bootstrap
 accounts-facebook

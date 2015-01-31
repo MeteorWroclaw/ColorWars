@@ -2,7 +2,15 @@
 
 Template.board.helpers({
     getBoard: function () {
-        return generateBoard();
+        var gameId = Router.current().params._id;
+        if (!gameId) {
+            return;
+        }
+        var game = Games.findOne(gameId);
+        if (!game) {
+            return;
+        }
+        return game.board;
     }
 });
 
